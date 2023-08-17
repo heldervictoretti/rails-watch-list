@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movies List</title>
+</head>
+<body>
+  <h1>Movies List</h1>
+
+  <ul>
+    <% @lists.each do |list| %>
+      <li><%= link_to list.name, list_path(list) %></li>
+    <% end %>
+  </ul>
+
+  <a class="create-link" href="<%= new_list_path %>">Create new list</a>
+</body>
+</html>
